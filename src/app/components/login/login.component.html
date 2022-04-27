@@ -1,0 +1,21 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitLogin()" class="form">
+  <h1>LOGIN</h1>
+  <div class="input-form">
+    <p *ngIf="this.loginForm.get('email')?.invalid && this.loginForm.get('email')?.touched"><small>Email is
+        required</small></p>
+    <input formControlName="email" type="email" placeholder="Email">
+  </div>
+  <div class="input-form">
+    <p *ngIf="this.loginForm.get('password')?.invalid && this.loginForm.get('password')?.touched"><small> Password is
+        required
+        (min. length = 8)</small></p>
+    <input formControlName="password" type="password" placeholder="password">
+  </div>
+  <div class="button-form">
+    <button [disabled]="loginForm.invalid" type="submit">Login</button>
+  </div>
+  <div class="footer-form">
+    <span>Don't have an account?</span>
+    <a [routerLink]="['']">Sign Up</a>
+  </div>
+</form>

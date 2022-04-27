@@ -1,0 +1,8 @@
+
+<div class="container" *ngFor="let user of personalList | async">
+  <div class="content">
+    <p>{{user.name}}</p>
+    <button [routerLink]="['user', user.id]" type="button">Details</button>
+  </div>
+</div>
+

@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: salmon;
+  .header_section {
+    display: flex;
+    align-items: center;
+    background-color: salmon;
+  }
+  .header_item {
+    background-color: salmon;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+    a {
+      background-color: salmon;
+      text-decoration: none;
+      color: #000;
+    }
+    button {
+      background-color: rgb(13, 236, 232);
+      font-size: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  }
+}
